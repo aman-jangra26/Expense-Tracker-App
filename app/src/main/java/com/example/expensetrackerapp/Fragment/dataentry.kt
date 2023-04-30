@@ -38,6 +38,7 @@ class dataentry : Fragment() {
             // Do something with the selected date
             val selectedDate = "$dayOfMonth/${monthOfYear + 1}/$year"
 //            Log.d(TAG, "Selected date: $selectedDate")
+            //amit
         }
         button.setOnClickListener {
 
