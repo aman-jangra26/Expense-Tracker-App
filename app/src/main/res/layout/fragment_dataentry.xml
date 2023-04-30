@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.dataentry"
+    >
+  <androidx.cardview.widget.CardView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dp"
+      app:cardCornerRadius="8dp"
+      app:cardElevation="4dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/in_card">
+      <TextView
+          android:id="@+id/tv1"
+          android:layout_marginTop="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:textSize="25sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:background="@drawable/in_textview"/>
+
+
+      <EditText
+          android:id="@+id/editText1"
+          android:layout_marginTop="12dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter Amount "
+          android:paddingLeft="10dp"
+          android:textSize="25sp"
+          android:textStyle="bold|italic"
+          android:drawableLeft="@drawable/ic_money"
+          android:background="@drawable/in_edittext"
+          android:inputType="number"/>
+
+      <EditText
+          android:id="@+id/editText2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:textStyle="bold|italic"
+          android:paddingLeft="10dp"
+          android:textSize="25sp"
+          android:drawableLeft="@drawable/ic_notes"
+          android:background="@drawable/in_edittext"
+          android:hint="Enter Note"/>
+
+
+      <DatePicker
+          android:id="@+id/date_picker"
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:calendarViewShown="false"
+          android:datePickerMode="spinner"
+          android:spinnersShown="true"
+          android:layout_margin="16dp"
+          android:textAlignment="center"
+          android:textSize="20sp"
+          android:textColor="@android:color/black"
+          android:background="@drawable/in_date"
+          android:padding="8dp" />
+
+
+      <Button
+          android:id="@+id/save"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Save"/>
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+</FrameLayout>
