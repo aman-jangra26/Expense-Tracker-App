@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.dataentry"
     >
+
   <androidx.cardview.widget.CardView
       xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -83,6 +84,20 @@
           android:layout_height="wrap_content"
           android:text="Save"/>
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_close"/>
+
+
   </androidx.cardview.widget.CardView>
+
+
+
 
 </FrameLayout>

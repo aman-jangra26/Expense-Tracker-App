@@ -26,10 +26,6 @@ class Adddata : Fragment() {
             // Create an instance of FragmentB
             val fragmentB = dataentry()
             fragmentB.arguments = bundle
-//            val transaction = fragmentManager?.beginTransaction()
-//            transaction?.replace(R.id.addfragment, newFragment)
-//            transaction?.addToBackStack(null)
-//            transaction?.commit()
             parentFragmentManager.beginTransaction()
                 .replace(R.id.addfragment, fragmentB)
                 .addToBackStack(null)
