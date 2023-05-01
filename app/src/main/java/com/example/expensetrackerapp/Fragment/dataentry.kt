@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.example.expensetrackerapp.R
+import java.io.File
 import java.util.*
 
 
@@ -47,6 +48,11 @@ class dataentry : Fragment() {
             Log.d(TAG, "Selected date: $value+$amount")
             Log.d(TAG, "Selected date: $note")
             Toast.makeText(requireContext(), "Expense Added in $value ", Toast.LENGTH_LONG ).show()
+            val filename = note
+            val fileContents = amount.toString()
+            val file = File(requireContext().filesDir, filename)
+            file.writeText(fileContents)
+            Log.d("MyApp", "File created successfully.")
 
             requireActivity().supportFragmentManager.popBackStack()
         }
