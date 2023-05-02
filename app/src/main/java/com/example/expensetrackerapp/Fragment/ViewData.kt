@@ -11,15 +11,20 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.helper.widget.MotionEffect.TAG
 import androidx.fragment.app.Fragment
 import com.example.expensetrackerapp.R
 import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.formatter.ValueFormatter
+import com.github.mikephil.charting.highlight.Highlight
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import java.io.File
 import java.util.*
 
@@ -34,6 +39,7 @@ class ViewData : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_view_data, container, false)
+        val amount = v.findViewById<TextView>(R.id.textView2)
 
 
 
@@ -65,6 +71,7 @@ class ViewData : Fragment() {
             myVariableName += arr[2].toInt()
 
         }
+        amount.setText(myVariableName.toString())
         Log.d(TAG, "onCreateView: $myVariableName")
         val monthSpinner = v.findViewById<Spinner>(R.id.monthSpinner)
         val currentMonth = Calendar.getInstance().get(Calendar.MONTH)
@@ -196,6 +203,9 @@ class ViewData : Fragment() {
                     }
                     //
                     val pieChart = v.findViewById<PieChart>(R.id.pieChart)
+                pieChart.description.text = "Expense Detail of $month"
+                pieChart.description.textSize = 14f
+                pieChart.description.textColor = Color.BLACK
                     Log.d(TAG, "onItemSelected: $Grocries")
                     Log.d(TAG, "onItemSelected: $Restaurant")
                     Log.d(TAG, "onItemSelected: $Education")
@@ -205,17 +215,18 @@ class ViewData : Fragment() {
                     Log.d(TAG, "onItemSelected: $Health")
                     Log.d(TAG, "onItemSelected: $Maintenance")
                     Log.d(TAG, "onItemSelected: $Vacation")
-
+                val abc :Int = Grocries+Restaurant+Education+Sports+Bills+Transit+Health+Maintenance+Vacation
+                    amount.setText(abc.toString())
                     val pieEntries = listOf(
-                        PieEntry(Grocries.toFloat(), " Groceries "),
-                        PieEntry(Restaurant.toFloat(), "Restaurant"),
-                        PieEntry(Education.toFloat(), "Education"),
-                        PieEntry(Sports.toFloat(), "Sports"),
-                        PieEntry(Bills.toFloat(), "Bills"),
-                        PieEntry(Transit.toFloat(), "Transit"),
-                        PieEntry(Health.toFloat(), "Health"),
-                        PieEntry(Maintenance.toFloat(), "Maintenance"),
-                        PieEntry(Vacation.toFloat(), "Vacation")
+                        PieEntry(Grocries.toFloat(),  if (Grocries > 0) "Grocries" else " "),
+                        PieEntry(Restaurant.toFloat(), if (Restaurant > 0) "Restaurant" else " "),
+                        PieEntry(Education.toFloat(), if (Education > 0) "Education" else " "),
+                        PieEntry(Sports.toFloat(), if (Sports > 0) "Sports" else " "),
+                        PieEntry(Bills.toFloat(), if (Bills > 0) "Bills" else " "),
+                        PieEntry(Transit.toFloat(), if (Transit > 0) "Transit" else " "),
+                        PieEntry(Health.toFloat(), if (Health > 0) "Health" else " "),
+                        PieEntry(Maintenance.toFloat(), if (Maintenance > 0) "Maintenance" else " "),
+                        PieEntry(Vacation.toFloat(), if (Vacation > 0) "Vacation" else " ")
                     )
 
                     val dataSet = PieDataSet(pieEntries, "My chart Title ")
@@ -227,23 +238,66 @@ class ViewData : Fragment() {
                     val data = PieData(dataSet)
                     data.setValueFormatter(PercentFormatter())
                     data.setValueTextSize(10f)
-
+                data.setValueFormatter(object : ValueFormatter() {
+                    override fun getFormattedValue(value: Float): String {
+                        return if (value == 0f) "" else value.toInt().toString()
+                    }
+                })
 
                     pieChart.data = data
+                pieChart.setCenterText("Total\n$abc")
+                pieChart.setCenterTextSize(20f)
 
+                pieChart.setOnChartValueSelectedListener(object : OnChartValueSelectedListener {
+                    private fun getIndexOfMaxValue(): Int {
+                        var maxIndex = 0
+                        var maxValue = 0f
+                        for (i in 0 until pieChart.data.entryCount) {
+                            val entry = pieChart.data.dataSets[0].getEntryForIndex(i)
+                            if (entry.y > maxValue) {
+                                maxValue = entry.y
+                                maxIndex = i
+                            }
+                        }
+                        return maxIndex
+                    }
+                    override fun onValueSelected(e: Entry?, h: Highlight?) {
+                        if (e == null) {
+                            // No value selected, show maximum value
+                            val maxEntry = pieChart.data.dataSets[0].getEntryForIndex(getIndexOfMaxValue())
+                            val maxValue = maxEntry.y.toInt().toString()
+
+                            pieChart.setCenterText("$maxValue")
+                        } else {
+                            // A value was selected, show its label and value
+                            var label =""
+                            if (e is PieEntry) {
+                                 label = e.label.toString()
+                            }
+                            val value = e.y.toInt().toString()
+                            pieChart.setCenterText("$label\n$value")
+                        }
+                    }
+                    override fun onNothingSelected() {
+                        // No value selected, show maximum value
+                        val maxEntry = pieChart.data.dataSets[0].getEntryForIndex(getIndexOfMaxValue())
+                        val maxValue = maxEntry.y.toInt().toString()
+                        pieChart.setCenterText("Total\n$abc")
+                    }
+                })
                     pieChart.setEntryLabelColor(Color.BLACK)
+
                     pieChart.animateY(1000)
+
+                pieChart.legend.isEnabled = false
                     pieChart.invalidate()
 
                 }
-
-
-
-
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
         }
+
 
 
             return v
@@ -260,6 +314,10 @@ class ViewData : Fragment() {
             }
             return fileNames
         }
-    }
+
+
+}
+
+
 
 
