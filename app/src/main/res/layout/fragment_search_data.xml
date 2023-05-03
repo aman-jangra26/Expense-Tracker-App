@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="#E1BE9C"
+        android:background="@drawable/databg"
         android:gravity="center"
         android:textColor="#00BFFF"
         android:textSize="25sp"

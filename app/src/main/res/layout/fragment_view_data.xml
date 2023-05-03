@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Fragment.ViewData"
     android:gravity="center_horizontal"
@@ -10,44 +11,56 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
 
         >
 
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="410dp"
             android:layout_height="200dp"
             android:orientation="vertical"
+            android:layout_margin="2dp"
             android:layout_gravity="center"
+            android:background="@drawable/viewbg"
 
-            android:padding="16dp"
 
             >
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:padding="16dp"
+                android:background="@drawable/out_textview"
+                android:textStyle="bold|italic"
+                android:textColor="@color/white"
                 android:text="Amount "
-                android:textSize="24sp" />
+                android:textSize="26sp" />
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
-
+                android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:text="Total Expenses For Selected Month "
+                android:background="@drawable/out_textview"
                 android:gravity="center"
                 android:textSize="18sp" />
             <Spinner
                 android:id="@+id/monthSpinner"
-                android:layout_marginLeft="110dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:scrollbarSize="50dp"
+                android:background="@drawable/edt_background"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -59,7 +72,7 @@
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+        app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
         >
 
@@ -68,7 +81,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:background="@drawable/pic4"
+            android:background="@drawable/piebg"
             android:padding="8dp"
 
             >

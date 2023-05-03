@@ -70,7 +70,8 @@ class ViewData : Fragment() {
             myVariableName += arr[2].toInt()
 
         }
-        amount.setText(myVariableName.toString())
+
+        amount.setText("₹ " +myVariableName.toString())
         Log.d(TAG, "onCreateView: $myVariableName")
         val monthSpinner = v.findViewById<Spinner>(R.id.monthSpinner)
         val currentMonth = Calendar.getInstance().get(Calendar.MONTH)
@@ -215,7 +216,7 @@ class ViewData : Fragment() {
                     Log.d(TAG, "onItemSelected: $Maintenance")
                     Log.d(TAG, "onItemSelected: $Vacation")
                 val abc :Int = Grocries+Restaurant+Education+Sports+Bills+Transit+Health+Maintenance+Vacation
-                    amount.setText(abc.toString())
+                    amount.setText("₹ " +abc.toString())
                     val pieEntries = listOf(
                         PieEntry(Grocries.toFloat(),  if (Grocries > 0) "Grocries" else " "),
                         PieEntry(Restaurant.toFloat(), if (Restaurant > 0) "Restaurant" else " "),

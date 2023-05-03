@@ -39,7 +39,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
+                android:background="#9F9891"
                >
 
 
@@ -48,7 +48,7 @@
                     android:layout_width="200dp"
                     android:layout_height="190dp"
                     android:layout_centerInParent="true"
-                    android:background="@color/white"
+                    android:background="#9F9891"
                     android:scaleType="fitCenter"
                     android:src="@drawable/b1" />
 
@@ -86,14 +86,14 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/white">
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button2"
+                        android:background="#9F9891"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b2" />
 
@@ -132,14 +132,15 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button3"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b3" />
 
@@ -177,16 +178,17 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button4"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/b4" /> />
+                        android:src="@drawable/b4" />
 
 
 
@@ -222,14 +224,15 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button5"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b5" /> />
 
@@ -267,14 +270,15 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button6"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b6" /> />
 
@@ -312,14 +316,16 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button7"
+
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b7" />
 
@@ -357,14 +363,15 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button8"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b8" />
 
@@ -402,14 +409,15 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#9F9891">
 
                     <ImageButton
                         android:id="@+id/button9"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/white"
+                        android:background="#9F9891"
                         android:scaleType="fitCenter"
                         android:src="@drawable/b9" />
 
