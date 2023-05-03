@@ -80,9 +80,14 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
                 .commit()
 
 
-            R.id.share -> Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
+            R.id.share -> {
+                    val share = Intent(Intent.ACTION_SEND)
+                    share.type = "text/plain"
+                    share.putExtra(Intent.EXTRA_TEXT, "https://drive.google.com/file/d/1oFHZI4lbNBLzA7LPV96abxwS_E6aoZJL/view?usp=sharing")
+                    startActivity(Intent.createChooser(share, " Download this "))
+
+            }
             R.id.nav_about -> {
-                // Navigate to SecondActivity
                 val intent = Intent(this, aboutPage::class.java)
                 startActivity(intent)
             }
