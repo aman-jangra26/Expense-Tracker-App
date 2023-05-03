@@ -36,30 +36,37 @@
           android:background="@drawable/in_textview"/>
 
 
+
       <EditText
           android:id="@+id/editText1"
-          android:layout_marginTop="12dp"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:hint="Enter Amount "
-          android:paddingLeft="10dp"
-          android:textSize="25sp"
-          android:textStyle="bold|italic"
+          android:layout_height="50dp"
+          android:hint="Amount"
+          android:textStyle="bold"
+          android:textColorHint="@color/black"
+          android:paddingLeft="15dp"
           android:drawableLeft="@drawable/ic_money"
-          android:background="@drawable/in_edittext"
-          android:inputType="number"/>
-
+          android:background="@drawable/edt_background"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"/>
       <EditText
           android:id="@+id/editText2"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="12dp"
-          android:textStyle="bold|italic"
-          android:paddingLeft="10dp"
-          android:textSize="25sp"
+          android:layout_height="50dp"
+          android:hint="Note"
+          android:textStyle="bold"
+          android:textColorHint="@color/black"
+          android:paddingLeft="15dp"
           android:drawableLeft="@drawable/ic_notes"
-          android:background="@drawable/in_edittext"
-          android:hint="Enter Note"/>
+          android:background="@drawable/edt_background"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"/>
+
+
 
 
       <DatePicker

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Expense Tracker </string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="nav_open">Open</string>
-    <string name="nav_close">Close</string>
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+
 </resources>

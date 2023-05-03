@@ -53,8 +53,12 @@ class SearchData : Fragment() {
         val fileNames = ArrayList<String>()
         val filesDir = requireContext().filesDir
         for (file in filesDir.listFiles()) {
+            val abc =file.toString()
+            if(abc.contains("login")|| abc.contains("users")){
+                continue
+            }
             fileNames.add(file.name)
-            Log.d(TAG, "getFileNames: $file[0] " +"$file[1] ")
+//               Log.d(ContentValues.TAG, "hello: $file[0] " + "$file[1] ")
         }
         return fileNames
     }

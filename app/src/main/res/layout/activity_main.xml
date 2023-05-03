@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <!-- Add your main content here -->
+
 
         <FrameLayout
             android:id="@+id/framelayout"

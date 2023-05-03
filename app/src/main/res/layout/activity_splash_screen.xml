@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="332dp"
         android:layout_height="370dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/expenso" />
+        android:src="@drawable/applogo2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imgLogo"
+        android:layout_centerInParent="true"
+        android:text="EXPENSO"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+
+        />
+
+
 
 
 
