@@ -4,17 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.dataentry"
+
     >
 
   <androidx.cardview.widget.CardView
       xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
+
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="16dp"
       app:cardCornerRadius="8dp"
       app:cardElevation="4dp"
-
     >
 
     <LinearLayout
@@ -22,16 +23,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@drawable/in_card">
+        android:background="@drawable/databg"
+       >
       <TextView
           android:id="@+id/tv1"
           android:layout_marginTop="10dp"
-          android:layout_width="match_parent"
+          android:layout_width="300dp"
+          android:layout_gravity="center"
           android:layout_height="wrap_content"
           android:text=""
-          android:textSize="25sp"
+          android:textSize="30dp"
           android:textColor="#000000"
-          android:textStyle="bold"
+          android:textStyle="bold|italic"
           android:gravity="center"
           android:background="@drawable/in_textview"/>
 
@@ -41,6 +44,7 @@
           android:id="@+id/editText1"
           android:layout_width="match_parent"
           android:layout_height="50dp"
+          android:inputType="number"
           android:hint="Amount"
           android:textStyle="bold"
           android:textColorHint="@color/black"
@@ -62,6 +66,7 @@
           android:drawableLeft="@drawable/ic_notes"
           android:background="@drawable/edt_background"
           android:layout_marginLeft="20dp"
+
           android:layout_marginRight="20dp"
           android:textColor="@color/black"
           android:layout_marginTop="10dp"/>
@@ -89,7 +94,8 @@
           android:id="@+id/save"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Save"/>
+          android:text="Save"
+          android:background="@drawable/btn_background"/>
     </LinearLayout>
 
     <ImageButton
@@ -98,7 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
         android:layout_margin="8dp"
-        android:background="@color/white"
+        android:background="#DCC576"
         android:src="@drawable/ic_close"/>
 
 

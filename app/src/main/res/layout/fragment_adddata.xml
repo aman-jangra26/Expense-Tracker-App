@@ -38,7 +38,10 @@
             app:cardElevation="4dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/white"
+               >
+
 
                 <ImageButton
                     android:id="@+id/button1"
@@ -53,14 +56,17 @@
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Groceries"
                 android:textSize="18dp"
                 android:textColor="@color/black"
+                android:textAlignment="center"
+                android:background="#dfbd69"
                 android:textStyle="bold"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
@@ -79,7 +85,8 @@
                 app:cardElevation="4dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
 
                     <ImageButton
                         android:id="@+id/button2"
@@ -98,9 +105,12 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
                         android:text="Restaurant"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:textSize="18dp"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -129,8 +139,8 @@
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_centerInParent="true"
-                        android:scaleType="fitCenter"
                         android:background="@color/white"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/b3" />
 
 
@@ -141,7 +151,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Education"
                         android:textSize="18dp"
@@ -184,7 +196,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Sports"
                         android:textSize="18dp"
@@ -227,7 +241,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Bills"
                         android:textSize="18dp"
@@ -270,7 +286,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Transit"
                         android:textSize="18dp"
@@ -313,7 +331,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Health"
                         android:textSize="18dp"
@@ -356,7 +376,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Maintenance"
                         android:textSize="18dp"
@@ -399,7 +421,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:background="#dfbd69"
                         android:layout_height="wrap_content"
                         android:text="Vacation"
                         android:textSize="18dp"

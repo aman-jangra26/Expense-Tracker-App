@@ -2,7 +2,8 @@
     android:shape="rectangle">
 
     <!-- Set the background color -->
-    <solid android:color="@android:color/white" />
+
+    <solid android:color="#DCC576" />
 
     <!-- Set the corner radius for rounded edges -->
     <corners android:radius="8dp" />

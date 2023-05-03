@@ -16,6 +16,7 @@ class UpdateData : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_data)
+        supportActionBar?.hide()
 
         val value = intent.getStringExtra("value")
         val abc = value.toString()

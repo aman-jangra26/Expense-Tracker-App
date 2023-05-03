@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.AmountSlip"
-    android:background="#F5F5F5"
+    android:background="@drawable/searchbg"
     >
     <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
         android:background="@drawable/listview_bg"
         >
@@ -21,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/listview_bg">
+        android:background="#E8E5B3"
+        >
 
     <TextView
         android:id="@+id/my_text_view"
@@ -46,13 +47,13 @@
             android:id="@+id/textView1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:text="Amount     :" />
 
         <TextView
             android:layout_width="0dp"
             android:id="@+id/textView2"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:layout_marginLeft="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -68,7 +69,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/textView3"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:text="Note          :" />
@@ -77,7 +78,7 @@
             android:layout_width="0dp"
             android:id="@+id/textView4"
             android:layout_marginLeft="50dp"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Text View 2" />
@@ -91,7 +92,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/textView5"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:text="Date          :" />
@@ -100,7 +101,7 @@
             android:layout_width="0dp"
             android:id="@+id/textView6"
             android:layout_marginLeft="50dp"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Text View 2" />
@@ -117,13 +118,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btnbg2"
                 android:text="Update" />
 
             <Button
                 android:id="@+id/delete_button"
                 android:layout_width="0dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/btnbg2"
                 android:layout_weight="1"
                 android:text="Delete"
                 />
@@ -136,7 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top|end"
             android:layout_margin="8dp"
-            android:background="#fef3d4"
+            android:background="#E8E5B3"
             android:src="@drawable/ic_close"/>
 
     </androidx.cardview.widget.CardView>

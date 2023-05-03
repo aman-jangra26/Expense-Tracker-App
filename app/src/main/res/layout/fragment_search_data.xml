@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Fragment.SearchData"
-    android:background="@drawable/pic3">
+    android:background="@drawable/searchbg">
 
 
     <TextView
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="#FFECDA"
+        android:background="#E1BE9C"
         android:gravity="center"
         android:textColor="#00BFFF"
         android:textSize="25sp"
