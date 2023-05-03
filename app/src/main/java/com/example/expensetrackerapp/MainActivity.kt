@@ -81,7 +81,11 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
 
             R.id.share -> Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
-            R.id.nav_about -> Toast.makeText(this, "Reported", Toast.LENGTH_SHORT).show()
+            R.id.nav_about -> {
+                // Navigate to SecondActivity
+                val intent = Intent(this, aboutPage::class.java)
+                startActivity(intent)
+            }
 
 
         }
